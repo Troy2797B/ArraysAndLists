@@ -1,5 +1,8 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
+
+import static java.lang.Double.parseDouble;
 
 public class LoadAndStore {
 
@@ -45,40 +48,33 @@ public class LoadAndStore {
     // use testDoubleData2.txt to test
 
     public double[] loaddoubleArrayFromFile(String filename) {
-        //make a buffered reader
-//        BufferedReader br = null;
-//        try {
-//            br = new BufferedReader(new FileReader(filename));
-//        } catch (FileNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
-//        String line = "";
-//        ArrayList<Double> array = new ArrayList<>();
-//        //have it read each line
-//        while (true){
-//            try {
-//                if ((line = br.readLine()) == null) break;
-//                if (line.startsWith("//")) continue;
-//            } catch (IOException e) {
-//                throw new RuntimeException(e);
-//            }
-//
-//            Double number = Double.parseDouble(line);
-//            array.add(number);
-//
-//        }
-//
-//        //if it is a double, then add it to the array
-//        //return the array
-//        return array;
-        return null;
+        ArrayList<Double> loaded = loadDoubleArrayListFromFile(filename);
+        double[] arr = new double[loaded.size()];
+        for (int i = 0; i < loaded.size(); i++)
+            arr[i] = loaded.get(i);
+        return arr;
     }
 
-    public ArrayList<Double> loadDoubleArrayListFromFile(String filename) { return null; }
+    public ArrayList<Double> loadDoubleArrayListFromFile(String filename) {
+        ArrayList <String> arrayList = loadStringArrayListFromFile(filename);
+        ArrayList<Double> doubleArrayList = new ArrayList<>();
+        double newS = 0;
+        for (String s : arrayList){
+            newS = parseDouble(s);
+            doubleArrayList.add(newS);
+        }
+        return doubleArrayList;
+    }
 
     // use testStringData3.txt to test
 
-    public String[] loadStringArrayFromFile(String filename) { return null; }
+    public String[] loadStringArrayFromFile(String filename) {
+        ArrayList<String> loaded = loadStringArrayListFromFile(filename);
+        String[] arr = new String[loaded.size()];
+        for (int i = 0; i < loaded.size(); i++)
+            arr[i] = loaded.get(i);
+        return arr;
+    }
 
     public ArrayList<String> loadStringArrayListFromFile(String filename) {
         BufferedReader br = null;
