@@ -18,11 +18,17 @@ class LoadAndStoreTest {
 
     @Test
     void loadIntArrayFromFile() {
+        //given an arraylist
+        //when
+        //then
         assertEquals(null, "");
     }
 
     @Test
     void loadIntegerArrayListFromFile() {
+        //given
+        //when
+        //then
         assertEquals(null, "");
     }
 

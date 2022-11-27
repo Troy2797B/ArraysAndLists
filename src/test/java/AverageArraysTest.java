@@ -1,7 +1,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 
 class AverageArraysTest {
-
+//TROY: COMPLETED
     @org.junit.jupiter.api.Test
     void count1() {
         int[] a = { 1, 2, 3};

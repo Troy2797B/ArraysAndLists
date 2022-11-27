@@ -31,7 +31,7 @@ public class ArraysAndLists {
         System.out.println("AA Count "+countaa+" Sum "+ sumaa+" Avg "+averageaa);
         System.out.println("BB Count "+countbb+" Sum "+ sumbb+" Avg "+averagebb);
     }
-
+    //TROY: this takes a given array and calls the count, sum, and average methods, then prints them out.
     private void doArrayListAnalysis() {
 
         ArrayList<Integer> aa = new ArrayList<Integer>(Arrays.asList(2,3,4,5,6));

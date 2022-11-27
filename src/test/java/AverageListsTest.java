@@ -4,7 +4,7 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AverageListsTest {
-
+//TROY : COMPLETED
 
     @org.junit.jupiter.api.Test
     void count1() {

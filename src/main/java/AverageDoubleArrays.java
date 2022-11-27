@@ -1,19 +1,26 @@
 public class AverageDoubleArrays {
-
-
+    //TROY: COMPLETED
 // Complete these methods
 
     public int count(double[] aa) {
-        return 0;
+        return aa.length;
     }
 
     public int sum(double[] aa) {
-
-        return 0;
+        double results = 0;
+        for (double n : aa) {
+            results += n;
+        }
+        return (int) results;
     }
 
     public int average(double[] aa) {
-        return 0;
+        int results = 0;
+        if (count(aa) == 0) {
+            results = 0;
+        } else {
+            results = sum(aa) / count(aa);
+        } return results;
     }
 
 }
