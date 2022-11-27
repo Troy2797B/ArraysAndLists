@@ -8,7 +8,6 @@ public class ArraysAndLists {
 
         mainObj.doArrayAnalysis();
         mainObj.doArrayListAnalysis();
-
         mainObj.doArrayLoading();
     }
 
@@ -28,8 +27,8 @@ public class ArraysAndLists {
         int averageaa = avga.average(aa);
         int averagebb = avga.average(bb);
 
-        System.out.println("AA Count "+countaa+" Sum "+ sumaa+" Avg "+averageaa);
-        System.out.println("BB Count "+countbb+" Sum "+ sumbb+" Avg "+averagebb);
+        System.out.println("First method: AA Count "+countaa+" Sum "+ sumaa+" Avg "+averageaa);
+        System.out.println("BB Count "+countbb+" Sum "+ sumbb+" Avg "+averagebb + "\n");
     }
     //TROY: this takes a given array and calls the count, sum, and average methods, then prints them out.
     private void doArrayListAnalysis() {
@@ -48,8 +47,8 @@ public class ArraysAndLists {
         int averageaa = avga.average(aa);
         int averagebb = avga.average(bb);
 
-        System.out.println("AA Count "+countaa+" Sum "+ sumaa+" Avg "+averageaa);
-        System.out.println("BB Count "+countbb+" Sum "+ sumbb+" Avg "+averagebb);
+        System.out.println("Second method: AA Count "+countaa+" Sum "+ sumaa+" Avg "+averageaa);
+        System.out.println("BB Count "+countbb+" Sum "+ sumbb+" Avg "+averagebb + "\n");
     }
 
     private void doArrayLoading() {
@@ -65,7 +64,7 @@ public class ArraysAndLists {
 
         int averagecc = avga.average(cc);
 
-        System.out.println("CC Count "+countcc+" Sum "+ sumcc+" Avg "+averagecc);
+        System.out.println("Third method : CC Count "+countcc+" Sum "+ sumcc+" Avg "+averagecc);
 
     }
 }

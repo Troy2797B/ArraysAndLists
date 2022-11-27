@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class LoadAndStore {
@@ -33,9 +30,7 @@ public class LoadAndStore {
                 if (line.startsWith("//")) continue; // ignore "//" comment lines
                 Integer number = Integer.parseInt(line);
                 result.add(number);
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (NumberFormatException e) {
+            } catch (IOException | NumberFormatException e) {
                 e.printStackTrace();
             }
         }
@@ -49,7 +44,35 @@ public class LoadAndStore {
 
     // use testDoubleData2.txt to test
 
-    public double[] loaddoubleArrayFromFile(String filename) { return new double[]{}; }
+    public double[] loaddoubleArrayFromFile(String filename) {
+        //make a buffered reader
+//        BufferedReader br = null;
+//        try {
+//            br = new BufferedReader(new FileReader(filename));
+//        } catch (FileNotFoundException e) {
+//            throw new RuntimeException(e);
+//        }
+//        String line = "";
+//        ArrayList<Double> array = new ArrayList<>();
+//        //have it read each line
+//        while (true){
+//            try {
+//                if ((line = br.readLine()) == null) break;
+//                if (line.startsWith("//")) continue;
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
+//
+//            Double number = Double.parseDouble(line);
+//            array.add(number);
+//
+//        }
+//
+//        //if it is a double, then add it to the array
+//        //return the array
+//        return array;
+        return null;
+    }
 
     public ArrayList<Double> loadDoubleArrayListFromFile(String filename) { return null; }
 
@@ -57,7 +80,28 @@ public class LoadAndStore {
 
     public String[] loadStringArrayFromFile(String filename) { return null; }
 
-    public ArrayList<String> loadStringArrayListFromFile(String filename) { return null; }
+    public ArrayList<String> loadStringArrayListFromFile(String filename) {
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(filename));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        String line ="";
+        ArrayList<String> result = new ArrayList<String>();
+
+        while (true) {
+            try {
+                if ((line = br.readLine()) == null) break; // break loop at end of file
+                if (line.startsWith("//")) continue; // ignore "//" comment lines
+                result.add(line);
+            } catch (IOException | NumberFormatException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return result;
+    }
 
     //
     // Finally:

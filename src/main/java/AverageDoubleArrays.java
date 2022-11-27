@@ -20,7 +20,9 @@ public class AverageDoubleArrays {
             results = 0;
         } else {
             results = sum(aa) / count(aa);
-        } return results;
+        }
+//        return Math.floor(results);
+        return (int) results;
     }
 
 }
