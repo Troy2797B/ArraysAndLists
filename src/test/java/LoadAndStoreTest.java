@@ -38,18 +38,16 @@ class LoadAndStoreTest {
 
     @Test
     void loadIntArrayFromFileT() {
-        //given an arraylist
-        //when
-        //then
-        assertEquals(null, "");
+        int[] expected = {4, 5, 6, 11, 13, 8, 9, 7, 14, 18};
+        int[] actual = bloop.loadIntArrayFromFile("testIntegerData1.txt");
+        assertArrayEquals(expected, actual);
     }
 
     @Test
     void loadIntegerArrayListFromFileT() {
-        //given
-        //when
-        //then
-        assertEquals(null, "");
+        ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(4, 5, 6, 11, 13, 8, 9, 7, 14, 18));
+        ArrayList<Integer> actual = bloop.loadIntegerArrayListFromFile("testIntegerData1.txt");
+        assertEquals(expected, actual);
     }
 
     @Test
